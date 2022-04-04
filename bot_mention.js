@@ -1,10 +1,6 @@
 // authenticates you with the API standard library
 const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
 
-lib.discord.users['@0.2.1'].me.status.update({
-  activity_name: `this.help`,
-  activity_type: 'LISTENING',
-  status: 'ONLINE'
 });
 
 let messageResponse = await lib.discord.channels['@0.3.1'].messages.create({
