@@ -22,7 +22,7 @@ else{
     });
     }
     else{
-      let result3 = await lib.http.request['@1.1.6']({
+      let result = await lib.http.request['@1.1.6']({
         url: `https://api.prod.scoolcode.com/files/${projectId}`
       });
       }
@@ -30,21 +30,20 @@ let test = 'test'
 console.log(`${test}`);
 if (projectId.includes(`?`)){
   if (linkId1.length != 24) {
-    console.log(result1.data)
   } else {
     console.log('Not 24 char long')
   }
 } else {
   if (linkId2.length != 24) {
-    console.log(result2.data)
   } else {
     console.log('Not 24 char long')
   }
+}}
 
 
 
 
   await lib.discord.channels['@0.0.6'].messages.create({
     channel_id: context.params.event.channel_id,
-    content: `debug`
+    content: `result.cookieCounter`
   });
