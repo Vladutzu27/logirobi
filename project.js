@@ -46,5 +46,5 @@ if (projectId.includes(`?`)){
 
   await lib.discord.channels['@0.0.6'].messages.create({
     channel_id: context.params.event.channel_id,
-    content: `result.data.cookieCounter`
+    content: `debug`
   });
